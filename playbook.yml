@@ -1,0 +1,26 @@
+---
+
+- name: python libraries
+  hosts: localhost
+  tasks:
+    - name: python
+      ansible.builtin.shell: pip3 install pyvmomi && pip3 install pyvim && pip3 install proxmoxer
+
+- name: test1
+  hosts: localhost
+  roles:
+    - get_ip
+    - get_vmware_vm_info
+    - get_vmware_guest_boot_info
+    - get_vmware_guest_network
+    - get_vmware_disk_info
+    - create_snapshot
+    - proxmox_vm
+
+- name: test2
+  hosts: "{{ hostvars.localhost.proxmoxNodeIp }}"
+  remote_user: ansible
+  become: yes
+  roles:
+    - get_ip
+    - copy_vmdk
