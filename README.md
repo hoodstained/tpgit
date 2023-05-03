@@ -1,4 +1,3 @@
 # tpgit
 en cours
-
-![le badge](https://github.com/hoodstained/tpgit/.github/workflows/ok.yml)
+[![nom-de-l-action](https://github.com/hoodstained/tpgit/actions/workflows/ok.yml/badge.svg)](https://github.com/hoodstained/tpgit/actions/workflows/ok.yml)
