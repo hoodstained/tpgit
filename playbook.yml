@@ -6,7 +6,7 @@
     - name: python
       ansible.builtin.shell: pip3 install pyvmomi && pip3 install pyvim && pip3 install proxmoxer
 
-- name: test1
+- name: test 1
   hosts: localhost
   roles:
     - get_ip
